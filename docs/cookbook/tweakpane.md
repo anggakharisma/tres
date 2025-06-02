@@ -44,8 +44,11 @@ const state = reactive({
 
 const pane = new Pane()
 
-pane.addInput(state, 'clearColor')
-pane.addInput(state, 'wireframe')
+pane.addBinding(state, 'wireframe', {
+  label: 'Wireframe',
+  input: 'checkbox'
+})
+pane.addBinding(state, 'clearColor')
 </script>
 
 <template>
